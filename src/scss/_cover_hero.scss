@@ -1,0 +1,224 @@
+.fullbleed-hero {
+    width: 100vw;
+    margin-bottom: 20px;
+
+    figure.hero-image {
+        margin: 0;
+
+        img {
+            width: 100vw;
+            height: 75vw;
+            object-fit: cover;
+            object-position: 100% 50%;
+            line-height: 1;
+        }
+
+        figcaption {
+            margin: 6px 1.5rem 0;
+
+            .img-byline {
+                display: block;
+                font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+                font-size: 9px !important;
+                text-align: center;
+                text-transform: uppercase;
+                color: #666;
+                letter-spacing: 1px;
+                line-height: 120%;
+                margin-bottom: 0;
+            }
+
+            .img-caption {
+                font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+                font-size: 13px !important;
+                color: #444;
+                margin-top: 6px;
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .dek-container {
+        padding: 40px 20px;
+        text-align: center;
+
+        .dek {
+
+            max-width: 420px;
+            margin: auto;
+
+            h1 {
+                font-family: 'Whitman Display', Cambria, Georgia, serif;
+                font-style: normal;
+                font-weight: normal;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 28px;
+                margin-bottom: 12px;
+                line-height: 1;
+            }
+
+            h2 {
+                font-family: 'Whitman Display', Cambria, Georgia, serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: normal;
+                line-height: 1.2;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.desktop-hero {
+    display: none;
+}
+
+@media screen and (min-width: $tablet) {
+    .fullbleed-hero {
+        margin-bottom: 60px;
+
+        figure.hero-image {
+            img {
+                height: auto;
+            }
+
+            figcaption {
+
+                .img-byline {
+                    font-size: 10px !important;
+                }
+
+                .img-caption {
+                    font-size: 14px !important;
+                    max-width: 600px;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+
+            }
+        }
+
+
+        .dek-container {
+            .dek {
+                padding: 50px 20px;
+                max-width: 650px;
+
+                h1 {
+                    font-size: 52px;
+                    margin-bottom: 20px;
+
+                }
+
+                h2 {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-sm) {
+
+    .desktop-hero {
+        display: block;
+    }
+
+    .mobile-hero {
+        display: none;
+    }
+
+    .fullbleed-hero {
+        position: relative;
+
+        .image-container {
+            margin-bottom: 60px;
+        }
+
+        figure.hero-image {
+            img {
+                height: calc(100vh - 40px);
+                object-position: 25% 50%;
+            }
+
+        }
+
+        .headline-container {
+            position: absolute;
+            top: calc(100vh - 40px);
+            transform: translate(0%, -100%);
+            width: 100vw;
+            background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 0.20) 15%, rgba(0, 0, 0, 0.30) 33%);
+            padding: 36px 0;
+
+            h1 {
+                font-family: 'Whitman Display', Cambria, Georgia, serif;
+                font-style: normal;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                line-height: 1;
+                float: right;
+                margin-right: 50px;
+                font-size: 60px;
+                margin-bottom: 0;
+                color: #f8f8f8;
+                text-shadow: 1px 1px #333;
+            }
+        }
+
+    }
+
+
+    .subhead-container {
+        display: block;
+        text-align: center;
+        margin-bottom: 80px;
+
+        h2 {
+            font-family: 'Whitman Display', Cambria, Georgia, serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.2;
+            margin-bottom: 0;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .series-article .article-byline-mod .article-byline,
+    .clean-sheet .article-byline-mod .article-byline {
+        font-size: 15px;
+    }
+
+    .series-article .article-byline-mod .article-dateline,
+    .clean-sheet .article-byline-mod .article-dateline {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: $desktop-lg) {
+
+    .fullbleed-hero {
+
+        .headline-container {
+            padding: 50px 0;
+
+            h1 {
+                max-width: 900px;
+                font-size: 76px;
+            }
+
+        }
+
+        .subhead-container {
+            h2 {
+                font-size: 40px;
+            }
+        }
+    }
+}
